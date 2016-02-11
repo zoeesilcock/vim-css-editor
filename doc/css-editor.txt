@@ -1,0 +1,49 @@
+*css-editor.txt* Vim plugin for easier editing of CSS files.
+
+Author: Zoee Silcock <http://zoeetrope.com>
+Repo: <https://github.com/zoeesilcock/vim-css-editor>
+
+===============================================================================
+vim-css-editor                                        *css-editor*
+
+CONTENTS
+
+1. Introduction                                       |css-editor-intro|
+2. Usage                                              |css-editor-usage|
+3. Mappings                                           |css-editor-mappings|
+
+===============================================================================
+
+1. Introduction                                       *css-editor-intro*
+
+Vim plugin for easier editing of CSS files.
+
+===============================================================================
+
+2. Usage                                              *css-editor-usage*
+
+Type 'cv' to replace the value portion of the current line and enter insert
+mode. Similarly, type 'cp' to replace the property portion of the current line
+and enter insert mode. The mnemonics are "change value" and "change property".
+
+===============================================================================
+
+3. Mappings                                           *css-editor-mappings*
+
+You can disable the built in mapping by adding this to your .vimrc:
+>
+  let g:css_editor_no_mappings = 1
+<
+If you want to setup your own key mappings use the following:
+<Plug>Nchangecssvalue          Change the CSS value of the current line.
+<Plug>Vchangecssproperty       Change the CSS property of the current line.
+
+For example:
+>
+  :nmap <leader>foo <Plug>Nchangecssvalue
+  :vmap <leader>foo <Plug>Vchangecssproperty
+<
+
+Note: Using |:noremap| will not work with <Plug> mappings.
+
+===============================================================================
