@@ -1,10 +1,13 @@
 " Mappings {{{
 function! s:change_css_value()
-  echo "Change CSS value"
+  execute 'normal! 0f:2ldt;l'
+  execute 'startinsert'
 endfunction
 
 function! s:change_css_property()
-  echo "Change CSS property"
+  execute 'normal! I'
+  execute 'normal! ldt:'
+  execute 'startinsert'
 endfunction
 
 nnoremap <silent> <Plug>Nchangecssvalue :<C-U>call <SID>change_css_value()<CR>
